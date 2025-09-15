@@ -247,7 +247,7 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ message: 'Ungültige Anmeldeinformationen.' });
         }
 
-        if (user.agreedToAGB === false || user.agreedToDSB === false) {
+        if (!user.agreedToAGB || !user.agreedToDSB) {
             return res.status(200).json({
                 message: 'Bitte stimmen Sie den aktuellen Bedingungen zu.',
                 agreementRequired: true
