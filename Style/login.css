@@ -543,8 +543,8 @@ forgot-password-link {
     margin: 0.5em;
     padding: 0.5em;
     border-radius: 1em;
-    background: linear-gradient(rgb(0, 50, 0), rgb(0, 150, 0), rgb(0, 50, 0));
-    color: rgb(255, 255, 255);
+    background: linear-gradient(rgb(0, 50, 0), rgb(0, 125, 0), rgb(0, 50, 0));
+    color: rgb(200, 200, 200);
 }
 
 #acceptBtn:disabled {
