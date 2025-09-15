@@ -200,8 +200,8 @@ app.post('/register', async (req, res) => {
     try {
         const { username, email, password, agreedToAGB, agreedToDSB } = req.body;
 
-        if(!agreedToAGB || !agreedToDSB){
-            return res.status(400).json({error:"Bitte stimmen sie den AGB und der Datenschutzerklärung zu!"})
+        if (!agreedToAGB || !agreedToDSB) {
+            return res.status(400).json({ error: "Bitte stimmen sie den AGB und der Datenschutzerklärung zu!" })
         }
 
         if (!username || !email || !password) {
@@ -219,7 +219,7 @@ app.post('/register', async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ username, email, password: hashedPassword, agreedToAGB, agreedToDSB, agreedAt: new Date()});
+        const newUser = new User({ username, email, password: hashedPassword, agreedToAGB, agreedToDSB, agreedAt: new Date() });
         await newUser.save();
         res.status(201).json({ message: 'Registrierung erfolgreich!' });
 
@@ -228,7 +228,6 @@ app.post('/register', async (req, res) => {
         res.status(500).json({ message: 'Interner Serverfehler bei der Registrierung.' });
     }
 });
-
 app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
@@ -248,6 +247,13 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ message: 'Ungültige Anmeldeinformationen.' });
         }
 
+        if (user.agreedToAGB === false || user.agreedToDSB === false) {
+            return res.status(200).json({
+                message: 'Bitte stimmen Sie den aktuellen Bedingungen zu.',
+                agreementRequired: true
+            });
+        }
+
         const token = jwt.sign(
             { id: user._id, username: user.username, playerdata: user.playerdata },
             jwt_Key,
@@ -264,6 +270,50 @@ app.post('/login', async (req, res) => {
     } catch (error) {
         console.error('Loginfehler:', error);
         res.status(500).json({ message: 'Interner Serverfehler beim Login.' });
+    }
+});
+app.post('/api/accept-agreements', async (req, res) => {
+    try {
+        const { username, password } = req.body;
+
+        if (!username || !password) {
+            return res.status(400).json({ message: 'Benutzername und Passwort sind erforderlich.' });
+        }
+
+        const user = await User.findOne({ username });
+
+        if (!user || !(await bcrypt.compare(password, user.password))) {
+            return res.status(401).json({ message: 'Ungültige Anmeldeinformationen.' });
+        }
+
+        const updatedUser = await User.findByIdAndUpdate(
+            user._id,
+            {
+                $set: {
+                    agreedToAGB: true,
+                    agreedToDSB: true,
+                    agreedAt: new Date()
+                }
+            },
+            { new: true }
+        );
+
+        const token = jwt.sign(
+            { id: updatedUser._id, username: updatedUser.username, playerdata: updatedUser.playerdata },
+            jwt_Key,
+            { expiresIn: '6h' }
+        );
+
+        res.status(200).json({
+            message: 'AGB und Datenschutzerklärung erfolgreich akzeptiert!',
+            token: token,
+            username: updatedUser.username,
+            playerdata: updatedUser.playerdata
+        });
+
+    } catch (error) {
+        console.error('Fehler beim Akzeptieren der Bedingungen:', error);
+        res.status(500).json({ message: 'Interner Serverfehler.' });
     }
 });
 

@@ -28,9 +28,11 @@ async function changeMode() {
 
 document.getElementById("loginForm").addEventListener('submit', async (e) => {
     e.preventDefault();
-    const username = e.target.username.value; const password = e.target.password.value;
+    const username = e.target.username.value;
+    const password = e.target.password.value;
     showMessage(loginMessageElement, 'Anmeldung läuft...', '');
     let link = GAME_SERVER_IP + "/login";
+
     try {
         const res = await fetch(link, {
             method: 'POST',
@@ -38,14 +40,23 @@ document.getElementById("loginForm").addEventListener('submit', async (e) => {
             body: JSON.stringify({ username, password }),
         });
         const data = await res.json();
+        
         if (res.ok) {
-            showMessage(loginMessageElement, data.message, 'success');
-            if (data.token) { localStorage.setItem('authToken', data.token); }
-            if (data.username) { localStorage.setItem('loggedInUsername', data.username); }
-            if (data.playerdata) { localStorage.setItem('playerData', JSON.stringify(data.playerdata)); }
-            e.target.reset(); await Delay(1500); window.location.href = 'game.html';
+            if (data.agreementRequired) {
+                showMessage(loginMessageElement, data.message, 'info');
+                showAgreementModal();
+            } else {
+                showMessage(loginMessageElement, data.message, 'success');
+                if (data.token) { localStorage.setItem('authToken', data.token); }
+                if (data.username) { localStorage.setItem('loggedInUsername', data.username); }
+                if (data.playerdata) { localStorage.setItem('playerData', JSON.stringify(data.playerdata)); }
+                e.target.reset();
+                await Delay(1500);
+                window.location.href = 'game.html';
+            }
+        } else {
+            showMessage(loginMessageElement, data.message, 'error');
         }
-        else { showMessage(loginMessageElement, data.message, 'error'); }
     } catch (error) {
         console.error('Netzwerk- oder Serverfehler beim Login:', error);
         showMessage(loginMessageElement, 'Es gab ein Problem beim Verbinden mit dem Server.', 'error');
@@ -85,5 +96,52 @@ document.getElementById("registerForm").addEventListener('submit', async (e) => 
     } catch (error) {
         console.error('Netzwerk- oder Serverfehler bei der Registrierung:', error);
         showMessage(registerMessageElement, 'Es gab ein Problem beim Verbinden mit dem Server.', 'error');
+    }
+});
+
+function showAgreementModal() {
+    document.getElementById('agreementModal').style.display = 'flex';
+}
+
+function hideAgreementModal() {
+    document.getElementById('agreementModal').style.display = 'none';
+}
+
+const agbCheck = document.getElementById('agb-check');
+const dsbCheck = document.getElementById('dsb-check');
+const acceptBtn = document.getElementById('acceptBtn');
+
+agbCheck.addEventListener('change', () => {
+    acceptBtn.disabled = !(agbCheck.checked && dsbCheck.checked);
+});
+
+dsbCheck.addEventListener('change', () => {
+    acceptBtn.disabled = !(agbCheck.checked && dsbCheck.checked);
+});
+
+document.getElementById('agreementForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const username = document.getElementById("loginForm").username.value;
+    const password = document.getElementById("loginForm").password.value;
+    
+    const res = await fetch(GAME_SERVER_IP + '/api/accept-agreements', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password, agreedToAGB: true, agreedToDSB: true }),
+    });
+
+    const data = await res.json();
+    
+    if (res.ok) {
+        showMessage(loginMessageElement, data.message, 'success');
+        if (data.token) { localStorage.setItem('authToken', data.token); }
+        if (data.username) { localStorage.setItem('loggedInUsername', data.username); }
+        if (data.playerdata) { localStorage.setItem('playerData', JSON.stringify(data.playerdata)); }
+        hideAgreementModal();
+        await Delay(1500);
+        window.location.href = 'game.html';
+    } else {
+        showMessage(loginMessageElement, data.message, 'error');
     }
 });

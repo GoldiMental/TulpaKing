@@ -81,6 +81,26 @@
         <button class="changeMode" onclick="changeMode()">&lt;&lt;&lt; Zurück zum Login </button>
     </div>
     <!--Register-Section-Ending-->
+    <div id="agreementModal"
+        style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+        <div style="background-color: #fff; padding: 20px; border-radius: 8px; max-width: 500px; text-align: center;">
+            <h2>Bedingungen akzeptieren</h2>
+            <p>Um fortfahren zu können, müssen Sie unseren aktualisierten Bedingungen zustimmen.</p>
+            <p>
+                <a href="agb.html" target="_blank">AGB lesen</a> |
+                <a href="datenschutz.html" target="_blank">Datenschutzerklärung lesen</a>
+            </p>
+            <form id="agreementForm">
+                <label>
+                    <input type="checkbox" id="agb-check"> Ich habe die AGB gelesen und stimme ihnen zu.
+                </label><br>
+                <label>
+                    <input type="checkbox" id="dsb-check"> Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.
+                </label><br>
+                <button type="submit" id="acceptBtn" disabled>Akzeptieren & Fortfahren</button>
+            </form>
+        </div>
+    </div>
     <!--Impressum-Section-Beginning-->
     <a class="impressum" target="_self" href="impressum.html">Impressum & Quellen</a>
     <!--Impressum-Section-Ending-->
