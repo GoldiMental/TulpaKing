@@ -545,7 +545,7 @@ forgot-password-link {
     border-radius: 1em;
 }
 
-#acceptBtn:disabled::before {
+#acceptBtn:disabled {
     background: linear-gradient(rgb(0, 50, 0), rgb(0, 50, 0), rgb(0, 50, 0));
     color: rgb(100, 100, 100);
 }
