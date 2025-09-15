@@ -539,6 +539,10 @@ forgot-password-link {
     text-shadow: 0 0 0.25em rgb(255, 0, 0);
 }
 
+.agreementModalStyle input:hover{
+    cursor: pointer;
+}
+
 #acceptBtn {
     margin: 0.5em;
     padding: 0.5em;
@@ -547,8 +551,13 @@ forgot-password-link {
     color: rgb(200, 200, 200);
 }
 
+#acceptBtn:hover{
+    cursor: pointer;
+    color:rgb(0, 255, 0);
+}
+
 #acceptBtn:disabled {
-    background: linear-gradient(rgb(0, 50, 0), rgb(0, 50, 0), rgb(0, 50, 0));
+    background: linear-gradient(rgb(50, 0, 0), rgb(50, 0, 0), rgb(50, 0, 0));
     color: rgb(100, 100, 100);
 }
 
