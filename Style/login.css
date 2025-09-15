@@ -531,6 +531,14 @@ forgot-password-link {
     text-align: center;
 }
 
+.agreementModalStyle a {
+    color: rgb(255, 215, 0);
+}
+
+.agreementModalStyle a:hover {
+    text-shadow: 0 0 0.25em rgb(255, 0, 0);
+}
+
 @media (max-width: 830px) {
     #TulpaIcon {
         top: 20px;
