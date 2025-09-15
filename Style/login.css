@@ -539,7 +539,7 @@ forgot-password-link {
     text-shadow: 0 0 0.25em rgb(255, 0, 0);
 }
 
-.agreementModalStyle input:hover{
+.agreementModalStyle input:hover {
     cursor: pointer;
 }
 
@@ -549,11 +549,14 @@ forgot-password-link {
     border-radius: 1em;
     background: linear-gradient(rgb(0, 50, 0), rgb(0, 125, 0), rgb(0, 50, 0));
     color: rgb(200, 200, 200);
+    transition: all 0.3s ease;
 }
 
-#acceptBtn:hover{
+#acceptBtn:hover {
     cursor: pointer;
-    color:rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
+    background: linear-gradient(rgb(0, 75, 0), rgb(0, 150, 0), rgb(0, 75, 0));
+    box-shadow: 0 0 0.5em rgb(0, 255, 0);
 }
 
 #acceptBtn:disabled {
