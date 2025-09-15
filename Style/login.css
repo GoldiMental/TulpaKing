@@ -540,7 +540,6 @@ forgot-password-link {
 }
 
 #acceptBtn:disabled::before {
-    content: '🔒';
     background: linear-gradient(rgb(0, 50, 0), rgb(0, 50, 0), rgb(0, 50, 0));
     color: rgb(100, 100, 100);
 }
