@@ -506,6 +506,28 @@ forgot-password-link {
     line-height: 1.35em;
 }
 
+#agreementModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.agreementModalStyle {
+    background: radial-gradient(rgba(0, 0, 100, 0.85), rgba(0, 0, 25, 0.85));
+    color: rgb(192, 192, 192);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    text-align: center;
+}
+
 @media (max-width: 830px) {
     #TulpaIcon {
         top: 20px;
