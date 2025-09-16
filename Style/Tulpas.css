@@ -57,7 +57,7 @@
 }
 
 .Wehrwolf {
-    background-image: url(../img/tulpaPic/Wehrwolf_Front.png);
+    background-image: url(../img/tulpaPic/Wehrwolf_F.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-right: 3px;
@@ -68,7 +68,7 @@
 }
 
 .Wehrwolf_Front {
-    background-image: url(../img/tulpaPic/Wehrwolf_Front.png);
+    background-image: url(../img/tulpaPic/Wehrwolf_F.png);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -77,7 +77,7 @@
 }
 
 .Wehrwolf_Back {
-    background-image: url(../img/tulpaPic/Wehrwolf_Back.png);
+    background-image: url(../img/tulpaPic/Wehrwolf_B.png);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
