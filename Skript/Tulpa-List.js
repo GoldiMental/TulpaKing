@@ -30,6 +30,8 @@ const Tulpas = {
     //Etwas grösser . Ein voll ausgewchsener Wolf
     Böser_Wolf: { name: "Böser Wolf", className: "Böser_Wolf", HP: 100, HP_Total: 100, ANG: 12, VER: 8, attacks: { 1: "Tackle", 2: "Biss", 3: "Blutlust", 4: "Todeshauch" }, des: "Der gute alte Böse Wolf. Wenn er grade keine Grossmütter tötet, dann ärgert er kleine Kinder" },
     //Dieser Wolf ist Pechschwarz und hat rote Augen. Er sieht sehr böse aus.
+    Wehrwolf: { name: "Wehrwolf", className: "Wehrwolf", HP: 150, HP_Total: 150, ANG: 14, VER: 9, attacks: { 1: "Tackle", 2: "Biss", 3: "Blutlust", 4: "Todeshauch" }, des: "Wenn sein Heulen in der Nacht ertönt, zittern sogar erfahrene Trainer. Es heißt, dass ein Rudel Wehrwölfe ganze Dörfer in die Flucht schlagen kann." },
+    //Jagt im Mondlicht lautlos durch die Wälder. Sein kräftiger Körper und seine scharfen Klauen machen ihn zu einem gefürchteten Gegner. Von vorne wirkt er bedrohlich mit glühenden Augen und fletschenden Zähnen, während er von hinten eine angespannte Haltung zeigt, immer bereit zum Angriff.
 
 
     Zosse: { name: "Zosse", className: "Zosse", HP: 50, HP_Total: 50, ANG: 6, VER: 8, attacks: { 1: "Tackle", 2: "Hufschlag", 3: "-", 4: "-" }, des: "Ein etwas klappriger Gaul. Nicht sicher ob er noch lange macht." },

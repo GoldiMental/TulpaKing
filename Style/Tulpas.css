@@ -56,6 +56,35 @@
     pointer-events: none;
 }
 
+.Wehrwolf {
+    background-image: url(../img/tulpaPic/Wehrwolf_Front.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 3px;
+    height: 80px;
+    width: 80px;
+    float: left;
+    pointer-events: none;
+}
+
+.Wehrwolf_Front {
+    background-image: url(../img/tulpaPic/Wehrwolf_Front.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.Wehrwolf_Back {
+    background-image: url(../img/tulpaPic/Wehrwolf_Back.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
 .Kampfmaus {
     background-image: url(../img/tulpaPic/kmaus_f.png);
     background-repeat: no-repeat;
