@@ -462,8 +462,50 @@
     pointer-events: none;
 }
 
+.Trainer_01 {
+    background-image: url(../img/textures/trainer01_profile.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
 .Trainer_02 {
     background-image: url(../img/textures/trainer02_profile.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.Trainer_03 {
+    background-image: url(../img/textures/trainer03_profile.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.Trainer_04 {
+    background-image: url(../img/textures/trainer04_profile.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.Trainer_05 {
+    background-image: url(../img/textures/trainer05_profile.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.Trainer_06 {
+    background-image: url(../img/textures/trainer06_profile.png);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
