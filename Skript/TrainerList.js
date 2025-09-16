@@ -84,7 +84,7 @@ const TrainerList = {
         Tulpa1: { name: "Kleiner_Wolf", Lv: 55, HP: 215, HP_Total: 215 },
         Tulpa2: { name: "Wolf", Lv: 60, HP: 255, HP_Total: 255 },
         Tulpa3: { name: "Böser_Wolf", Lv: 65, HP: 295, HP_Total: 295 },
-        Tulpa4: { name: "WehrWolf", Lv: 70, HP: 360, HP_Total: 360 },
+        Tulpa4: { name: "Wehrwolf", Lv: 70, HP: 360, HP_Total: 360 },
         Tulpa5: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         picture: "",
