@@ -323,6 +323,7 @@ async function self_attack(attack) {
                 console.log("Neues Level: ", tulpa_self.Lv, " HP:", tulpa_self.HP, " EXP:", tulpa_self.XP);
                 document.getElementById('Name-self').innerHTML = tulpa_self.name + " Lv. " + tulpa_self.Lv;
                 document.getElementById('battle_text').innerText = tulpa_self.name + " ist ein Level aufgestiegen";
+                document.getElementById('fill-self').style.width = Math.round(tulpa_self.HP / tulpa_self.HP_Total * 100) + "%"; await Delay(300);
             }
             await Delay(1000);
             document.getElementById('Name-opp').style.opacity = "0";
