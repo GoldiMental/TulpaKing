@@ -56,7 +56,7 @@ const TrainerList = {
         Tulpa4: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         Tulpa5: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
-        picture: "Trainer_005",
+        picture: "Trainer_05",
     },
     Trainer004: { //Erster Arena Trainer
         name: "Piekso",
@@ -71,7 +71,7 @@ const TrainerList = {
         Tulpa4: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         Tulpa5: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
-        picture: "Trainer_001",
+        picture: "Trainer_01",
     },
     ArenaLeiter001: { //Arena Leiter
         name: "Rachel",
@@ -92,7 +92,7 @@ const TrainerList = {
         Tulpa4: { name: "Wehrwolf", Lv: 70, HP: 360, HP_Total: 360 },
         Tulpa5: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
-        picture: "Trainer_006",
+        picture: "Trainer_06",
     },
 }
 async function Trainer000monolog(Trainer) {
