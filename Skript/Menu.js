@@ -55,17 +55,20 @@ async function Cheat() {
                 break;
             case "GETBOSSTULPA":
                 Player.Tulpas.Slot_1 = { name: "Streitross", Lv: 250, HP: 1350, HP_Total: 1350, XP: 3125000 };
+                Player.Cheats += 1;
                 showCustomAlert(CheatInput + " wurde erfolgreich ausgeführt!");
                 console.log("Cheat() ✅");
                 break;
             case "GETUBERTULPA":
                 Player.Tulpas.Slot_1 = { name: "Böser_Wolf", Lv: 1000, HP: 5100, HP_Total: 5100, XP: 50000000 };
                 showCustomAlert(CheatInput + " wurde erfolgreich ausgeführt!");
+                Player.Cheats += 1;
                 console.log("Cheat() ✅");
                 break;
             case "MAIKYTULPA":
                 Player.Tulpas.Slot_4 = { name: "Böser_Wolf", Lv: 5, HP: 75, HP_Total: 75, XP: 1250 };
                 showCustomAlert(CheatInput + " wurde erfolgreich ausgeführt!");
+                Player.Cheats += 1;
                 console.log("Cheat() ✅");
                 break;
             default:
