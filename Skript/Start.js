@@ -82,13 +82,12 @@ async function InitializeGameWorld() {
     console.log("Führe InitializeGameWorld() aus...");
     const movementGame = document.getElementById("movement_game");
     movementGame.classList.toggle("hidethis", true);
-    if (Player.tulpaGegeben) { Player.questLine = { tulpaGegeben: Player.tulpaGegeben, } }
+    if (!Player.questLine.tulpaGegeben) { Player.questLine = { tulpaGegeben: Player.tulpaGegeben, } }
     setcolor();
     if (Player.MapX != 0 && Player.MapY != 0 && Player.MapX != undefined && Player.MapY != undefined) {
         console.log("Karte:", Player.actualMap);
         changeMap(Player.actualMap);
         console.log("MapX:", Player.MapX, " MapY:", Player.MapY);
-        //Function LoadStory()
         loadStory()
         await Delay(300);
         movementGame.classList.toggle("hidethis", false);
