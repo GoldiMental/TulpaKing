@@ -323,6 +323,7 @@ app.get('/api/playerdata', authenticateToken, async (req, res) => {
         if (!user) {
             return res.status(404).json({ message: 'Benutzer nicht gefunden.' });
         }
+        console.log('Server-Daten vor dem Senden:', user.playerdata.questLine);
         res.status(200).json({ playerdata: user.playerdata, username: user.username });
     } catch (error) {
         console.error('Fehler beim Abrufen der Playerdata:', error);
