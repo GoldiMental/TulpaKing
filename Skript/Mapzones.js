@@ -30,7 +30,7 @@ var maps = {
             { minX: -425, maxX: -425, minY: -525, maxY: -475 },
             { minX: -775, maxX: -775, minY: -475, maxY: -425 },
             //TrainerText_tulpaGegeben?-Block-Pos
-            { minX: -1075, maxX: -1075, minY: -225, maxY: -225, story: true, storyID:"tulpaGegeben" },
+            { minX: -1075, maxX: -1075, minY: -225, maxY: -225, story: true, storyID: "tulpaGegeben" },
             //Map(Hohes Gras). 
             { minX: -1475, maxX: -1475, minY: -250, maxY: 250 },
             { minX: -1575, maxX: -1525, minY: -125, maxY: 250 },
@@ -61,6 +61,10 @@ var maps = {
             { minX: -3225, maxX: -3175, minY: -25, maxY: -25 },
             { minX: -3275, maxX: -3025, minY: 25, maxY: 225 },
             { minX: -3025, maxX: -3025, minY: -75, maxY: -25 },
+            //Trainer Pascal
+            { minX: -3475, maxX: -3475, minY: -225, maxY: -225 },
+            //Streuner von Pascal
+            { minX: -3525, maxX: -3525, minY: -275, maxY: -275 },
             //Map(Hohes Graß Arena) Max=Min und Min=Max!!!!
             { minX: -3725, maxX: 225, minY: -1075, maxY: -975 },
             { minX: -625, maxX: 225, minY: -1525, maxY: -1125 },
@@ -96,10 +100,6 @@ var maps = {
             { minX: -4025, maxX: -4025, minY: -675, maxY: -25 },
             { minX: -3825, maxX: -3725, minY: -675, maxY: -325 },
             { minX: -3825, maxX: -3775, minY: -275, maxY: -25 },
-            //Trainer Pascal
-            { minX: -3475, maxX: -3475, minY: -225, maxY: -225 },
-            //Streuner von Pascal
-            { minX: -3525, maxX: -3525, minY: -275, maxY: -275 },
         ],
         battleAreaHG: [
             { minX: -625, maxX: 175, minY: -2175, maxY: -1875 },
