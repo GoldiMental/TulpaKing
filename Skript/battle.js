@@ -345,7 +345,7 @@ async function self_attack(attack) {
                     const tulpaKey = "Tulpa" + i;
                     if (trainer.hasOwnProperty(tulpaKey) && trainer[tulpaKey].name !== "" && trainer[tulpaKey].HP > 0) {
                         TulpaIndex = "Tulpa" + i;
-                        document.getElementById('bg02-sound').play();
+                        document.getElementById('bgr02-sound').play();
                         Trainerbattle("Tulpa" + i);
                         nextTulpaFound = true;
                         console.log("trainerbattle => Trainerbattle(Tulpa", i, ")...");
