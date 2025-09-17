@@ -31,7 +31,7 @@ const TrainerList = {
         btext: "Hallo Fremder, wie schön, dich wiederzusehen.",
         btext1: "Ich wollte zu viel im letzten kampf und habe dafür direkt die Quittung bekommen.",
         btext2: "Kannst du mir helfen, meinen Streuner wieder aufzupeppeln? ",
-        btext3: "Gehe schnell in die Stadt zurück und sprich mit Professor Troy.",
+        btext3: "Gehe schnell und bring mir bitte ein Heilmittel...!",
         btext4: "SCHNELL!!!!!!!",
         gold: 250,
         Tulpa1: { name: "Streuner", Lv: 12, HP: 90, HP_Total: 90 },
