@@ -729,6 +729,17 @@ a:hover {
     border-radius: 1em !important;
 }
 
+.TrainerHund {
+    background-image: url(../img/textures/tR2.png);
+    background-size: 175%;
+    background-position: 50%;
+    position: absolute;
+    top: 550px;
+    left: 3500px;
+    height: 50px;
+    width: 50px;
+}
+
 .Trainer {
     background-image: url(../img/textures/tR2.png);
     background-size: 175%;
