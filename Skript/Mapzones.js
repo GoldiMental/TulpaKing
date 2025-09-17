@@ -61,10 +61,10 @@ var maps = {
             { minX: -3225, maxX: -3175, minY: -25, maxY: -25 },
             { minX: -3275, maxX: -3025, minY: 25, maxY: 225 },
             { minX: -3025, maxX: -3025, minY: -75, maxY: -25 },
-            //Trainer Pascal
-            { minX: -3475, maxX: -3475, minY: -225, maxY: -225 },
-            //Streuner von Pascal
-            { minX: -3525, maxX: -3525, minY: -275, maxY: -275 },
+            //Trainer Pascal (Activieren wenn fertig!)
+            //{ minX: -3475, maxX: -3475, minY: -225, maxY: -225 },
+            //Streuner von Pascal (Activieren wenn fertig!)
+            //{ minX: -3525, maxX: -3525, minY: -275, maxY: -275 },
             //Map(Hohes Graß Arena) Max=Min und Min=Max!!!!
             { minX: -3725, maxX: 225, minY: -1075, maxY: -975 },
             { minX: -625, maxX: 225, minY: -1525, maxY: -1125 },
