@@ -307,7 +307,6 @@ async function self_attack(attack) {
             document.getElementById('bgr02-sound').pause();
             document.getElementById('bgr02-sound').currentTime = 0;
             document.getElementById('win-sound').play(); await Delay(2000);
-            document.getElementById('bg03-sound').play(); await Delay(500);
             let exp = Math.round((25 * tulpa_lv) * ((8 + Math.random() * 4)) / 10);
             if (tulpa_lv > tulpa_self.Lv) { exp *= 2; };
             document.getElementById('battle_text').innerText = "Du hast " + exp + " EXP. erhalten!";
@@ -332,6 +331,7 @@ async function self_attack(attack) {
             document.getElementById('LP-self').style.opacity = "0";
             console.log("Prüfe auf Trainerbattle:", trainerbattle != 0);
             if (trainerbattle == 0) {
+                document.getElementById('bg03-sound').play();
                 console.log("Kein Trainerkampf ✅ => Leite Spieler zurück zur Karte...");
                 document.getElementById("movement_game").classList.toggle("hidethis", false);
                 document.getElementById("battle_game").classList.toggle("hidethis", true);
@@ -345,6 +345,7 @@ async function self_attack(attack) {
                     const tulpaKey = "Tulpa" + i;
                     if (trainer.hasOwnProperty(tulpaKey) && trainer[tulpaKey].name !== "" && trainer[tulpaKey].HP > 0) {
                         TulpaIndex = "Tulpa" + i;
+                        document.getElementById('bg02-sound').play();
                         Trainerbattle("Tulpa" + i);
                         nextTulpaFound = true;
                         console.log("trainerbattle => Trainerbattle(Tulpa", i, ")...");
@@ -358,7 +359,9 @@ async function self_attack(attack) {
                     await Delay(1500);
                     document.getElementById('battle_text').innerText = "Du hast " + trainer.gold + " Gold erhalten!";
                     console.log("Gold vorher: ", Player.Gold, " Gold nachher: ", Player.Gold, " + ", trainer.gold, " = ", Player.Gold += trainer.gold);//Goldabgabe an Spieler
-                    Player.Gold += trainer.gold; trainer = {}; await Delay(1500);
+                    Player.Gold += trainer.gold; trainer = {};
+                    document.getElementById('bg03-sound').play();
+                    await Delay(1500);
                     console.log("Speicher Trainer als Besiegt ab...")
                     document.getElementById("movement_game").classList.toggle("hidethis", false);
                     document.getElementById("battle_game").classList.toggle("hidethis", true);
