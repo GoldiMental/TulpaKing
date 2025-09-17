@@ -739,7 +739,7 @@ a:hover {
     height: 50px;
     width: 50px;
 }
-#TrainerStreuner {
+.TrainerStreuner {
     background-image: url(../img/tulpaPic/streuner_sitz.png);
     background-size: 175%;
     background-position: 50%;

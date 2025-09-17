@@ -96,6 +96,7 @@ var maps = {
             { minX: -4025, maxX: -4025, minY: -675, maxY: -25 },
             { minX: -3825, maxX: -3725, minY: -675, maxY: -325 },
             { minX: -3825, maxX: -3775, minY: -275, maxY: -25 },
+            //{ minX: , maxX: , minY: , maxY:  },
         ],
         battleAreaHG: [
             { minX: -625, maxX: 175, minY: -2175, maxY: -1875 },

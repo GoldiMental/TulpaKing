@@ -22,12 +22,17 @@ const TrainerList = {
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         picture: "Trainer_02", //ClassName for Picture in CSS
     },
-    Trainer002: {
+    Trainer002: { //Story Trainer
         name: "Pascal",
-        text1: "Halt Stop !!",
-        text2: "Ich bin Hundetrainer Pascal!!",
-        text3: "Du und ich kämpfen jetzt!!!",
-        text4: "SOFORT!!!!!!!",
+        text1: "Da bist du wieder! Endlich!",
+        text2: "Wie ich sehe, hast du alles von Professor Troy bekommen.!",
+        text3: "Vielen Dank dafür. Gerne würde ich dein Können auf die Probe stellen!",
+        text4: "Haha... Möge der bessere Trainer gewinnen.!",
+        btext: "Hallo Fremder, wie schön, dich wiederzusehen.",
+        btext1: "Ich wollte zu viel im letzten kampf und habe dafür direkt die Quittung bekommen.",
+        btext2: "Kannst du mir helfen, meinen Streuner wieder aufzupeppeln? ",
+        btext3: "Gehe schnell in die Stadt zurück und sprich mit Professor Troy.",
+        btext4: "SCHNELL!!!!!!!",
         gold: 250,
         Tulpa1: { name: "Streuner", Lv: 12, HP: 90, HP_Total: 90 },
         Tulpa2: { name: "Wachhund", Lv: 15, HP: 105, HP_Total: 105 },
@@ -37,7 +42,7 @@ const TrainerList = {
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         picture: "Trainer_03",
     },
-    Trainer003: {
+    Trainer003: { //Zweiter Arena Trainer
         name: "Rocky",
         text1: "Ein Häschensammler fordert dich heraus!",
         text2: "Du wirst meine geballte Erfahrung zu spüren bekommen!",
@@ -53,7 +58,7 @@ const TrainerList = {
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         picture: "Trainer_05",
     },
-    Trainer004: {
+    Trainer004: { //Erster Arena Trainer
         name: "Piekso",
         text1: "Wen haben wir denn da....!!",
         text2: "Ich habe schon lange auf einen starken Gegner gewartet.",
@@ -68,7 +73,7 @@ const TrainerList = {
         Tulpa6: { name: "", Lv: 0, HP: 0, HP_Total: 0 },
         picture: "Trainer_01",
     },
-    ArenaLeiter001: {
+    ArenaLeiter001: { //Arena Leiter
         name: "Rachel",
         text1: "Okay Okay... wie ich sehe hast du meine Arena Trainer besiegt.!",
         text2: "Ich bin Rachel, ",
