@@ -730,7 +730,17 @@ a:hover {
 }
 
 .TrainerHund {
-    background-image: url(../img/textures/tR2.png);
+    background-image: url(../img/textures/tR3.png);
+    background-size: 175%;
+    background-position: 50%;
+    position: absolute;
+    top: 450px;
+    left: 3697px;
+    height: 50px;
+    width: 50px;
+}
+#TrainerStreuner {
+    background-image: url(../img/tulpaPic/streuner_sitz.png);
     background-size: 175%;
     background-position: 50%;
     position: absolute;
