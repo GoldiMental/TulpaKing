@@ -1315,6 +1315,10 @@ input[type=range]::-webkit-slider-thumb {
     bottom: 0.1em;
     right: 0.1em;
 }
+#GoldiMentalLink{
+    background: none;
+    border: none;
+}
 
 footer {
     position: fixed;
