@@ -111,6 +111,9 @@ var maps = {
             //{ minX: , maxX: , minY: , maxY:  },
             //{ minX: , maxX: , minY: , maxY:  },
         ],
+        storyQuest: [ // Start bei Pascal mit seinem Hund in Dunkelwald.(Aktivieren wenn Fertig)
+            //{ minX: -3425, maxX: -3425, minY: -275, maxY: -275 },
+        ],
         //ProfHome. 
         profHome: [
             { minX: -925, maxX: -925, minY: -525, maxY: -525 },
