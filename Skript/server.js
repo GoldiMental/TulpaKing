@@ -10,8 +10,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-const MAINTENANCE_MODE = false;
-const DEV_IP = ['194.94.72.244', '185.17.204.31'];
+const MAINTENANCE_MODE = true;
+const DEV_IP = ['185.17.204.31'];
 const OpenIP = process.env.OPEN_IP;
 app.use(cors());
 app.use(express.json());
@@ -60,7 +60,7 @@ app.get('/dev', (req, res, next) => {
         res.send('Willkommen im Entwickler-Panel!');
         next();
     } else {
-        res.status(403).send('Zugriff verweigert.');
+        res.status(403).send('Zugriff verweigert. Du bist kein Entwickler!');
     }
 });
 
