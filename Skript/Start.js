@@ -153,7 +153,7 @@ async function SaveGame() {
         }
     } catch (error) {
         console.error('Netzwerkfehler beim Speichern des Spiels:', error);
-        await showCustomAlert('Verbindungsfehler beim Speichern. Bitte überprüfe deine Internetverbindung oder versuche es später erneut.');
+        await showCustomAlert('Verbindungsfehler! Bitte wende Dich umgehend an den Support! Aktualisiere NICHT die Seite! Halte Sie bitte offen. Klicke einfach unten auf das GoldiMental-Symbol und du wirst mit unserem Discord verbunden.');
     }
 }
 const sounds = [
